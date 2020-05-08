@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*HEADER*/
+header{
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    color: white;
+    z-index: 1000;
+}
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.content-logo{
+    width: 0%;/*contenido del elemento desborda*/
+}
+.content-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+.icon-logo{
+    width: 20px;
+    height: 20px;
+    background-image:  url("../images/logo.png");
+    background-size: cover;
+    margin: 20px;
+}
+.icon-menu{
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/icon-menu.png");
+    background-size: cover;
+    background-color: red;
+    margin: 20px;
+
+}
+
+#btn-menu{
+    display: none;
+}
+.menu{
+    display: none;
+    list-style: none;
+    background-color: blue;
+    width: 100%;
+    
+}
+.menu-item{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+}
+#btn-menu:checked + .menu{
+    display: block;
+   
+}
+
+
+/*FIN HEADER*/
+/*aside TITULOS*/
+.titulos{
+    padding: 20px;
+}
+
+/*FIN aside TITULOS*/
+/*aside EPISODIOS*/
+.contenedor-oblicuo{
+    transform: skewY(-5deg);
+    padding: 10px 0px 100px 0px;
+    background: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);;
+}
+.contenedor-episodios{
+    
+    padding: 10px;
+}
+.contenedor-episodios h1{
+    color: white;
+}
+
+.alineado{
+    transform: skewY(5deg);
+}
+
+/*FIN aside EPISODIOS*/
+/*aside x*/
+.contenedor-historia{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.contenedor-historia h1, .contenedor-historia p{
+    margin: 10px;
+}
+.img-foto{
+    position: relative;
+    background-size: cover;
+    width: 100%;
+    height: 243px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/*FIN aside x*/
+
+/*aside temas*/
+.temas{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contedor-tema{
+    position: relative;
+    height: 130px;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    text-justify: ;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.img-phone-historia{
+    position: relative;
+    top: -80px;
+    background-size: cover;
+    height: 519px;
+}
+
+/*FINaside temas*/
+
+/*ASIDE NOVEDADES*/
+
+.contenedor-novedades > h1{
+    text-align: center;
+    color: white;
+    font-size: 36px;
+}
+/*FIN ASIDE NOVEDADES*/
+
+footer{
+    position: relative;
+    z-index: 100; 
+    background-color: white;  
+    top: -25px;
+}
+.contenedor-footer{
+    padding: 10px;
+    height: 80px;
+}
+.derechos{
+    padding: 10px;
+    text-align: center;
+}
+.contenedor-icon-redes-sociales{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+/*GENERALES*/
+input[type="button"]{
+    position: relative;
+    width: 288px;
+    height: 48px;
+    background-color: #00F3BB;
+    border-style: none;
+    left: 50%;
+    transform: translate(-50%,0px);
+    margin: 10px 0px 10px 0px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+}
+
+h1{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 36px;
+    margin: 30px 0px 15px 0px;
+    text-align: left;
+}
+.contedor-tema > h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 24px;
+    color: #060A24;
+    
+}
+.contenedor-novedades > h1{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+p{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    color: #060A24;
+}
+a{
+    padding: 20px;
+    height: 10px;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+/*FIN GENERALES*/
+
+/*################# DESKTOP #################*/
+@media(min-width:481px){
+    .navegacion{
+        display: flex;
+    }
+    #btn-menu{
+        display: none;
+    }
+    .icon-menu{
+        display: none;
+    }
+    .icon-logo{
+        width: 20px;
+        height: 20px;
+    }
+    .content-logo{
+        width: 20%;
+    }
+    .content-menu{
+        width: 80%;
+    }
+    .menu{
+        background-color: white;
+    }
+    .menu-item{
+        background-color: white;
+        display: inline-block;
+        
+    }
+    .menu-item a{
+        color: black;
+        
+    }
+    .menu{
+        position: relative;
+        display: inline-block;
+        z-index: 0;
+    }
+    a{
+
+    }
+}
+
