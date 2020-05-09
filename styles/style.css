@@ -309,9 +309,46 @@ a{
     .contenedor-historia-portada div{
         grid-column: 2/3;
         grid-row: 3/4;
-      
     }
     
+    .contenedor-historia-img{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+    }
     /*fin aside historia*/
+
+    /*aside temas*/
+    .contenedor-img-temas{
+        position: relative;
+        display: grid;
+        grid-template-columns: 260px 260px 260px 260px;
+        justify-content: space-around;
+    }
+    .temas{
+        margin-bottom: 60px;
+    }
+    /*fin aside temas*/
+
+    /*novedades*/
+    .contenedor-novedades{
+        height: 300px;
+    }
+    /*fin novedades*/
+    footer{
+        top: -100px;
+    }
+    .contenedor-footer{
+        top:-450px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .derechos{
+        padding-left: 50px;
+    }
+    .contenedor-icon-redes-sociales{
+        width: 20%;
+    }
 }
 
