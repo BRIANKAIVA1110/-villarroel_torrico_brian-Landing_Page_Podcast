@@ -16,7 +16,7 @@ header{
 .navegacion{
     display: flex;
     justify-content: space-between;
-    
+
 }
 .content-logo{
     width: 0%;/*contenido del elemento desborda*/
@@ -52,7 +52,7 @@ header{
     list-style: none;
     background-color: blue;
     width: 100%;
-    
+
 }
 .menu-item{
     font-family: 'IBM Plex Mono', monospace;
@@ -60,7 +60,7 @@ header{
 }
 #btn-menu:checked + .menu{
     display: block;
-   
+
 }
 
 
@@ -75,16 +75,16 @@ header{
 .contenedor-oblicuo{
     transform: skewY(-5deg);
     padding: 10px 0px 100px 0px;
-    background: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);;
+    background: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
 }
 .contenedor-episodios{
-    
+
     padding: 10px;
     transform: skewY(5deg);
 }
 .contenedor-episodios h1{
     color: white;
-    
+
 }
 
 /*FIN aside EPISODIOS*/
@@ -148,8 +148,8 @@ header{
 
 footer{
     position: relative;
-    z-index: 100; 
-    background-color: white;  
+    z-index: 100;
+    background-color: white;
     top: -25px;
 }
 .contenedor-footer{
@@ -189,7 +189,7 @@ h1{
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 24px;
     color: #060A24;
-    
+
 }
 .contenedor-novedades > h1{
     font-family: 'IBM Plex Sans', sans-serif;
@@ -214,22 +214,20 @@ a{
 @media(min-width:481px){
     .navegacion{
         display: flex;
-    }
-    #btn-menu{
-        display: none;
-    }
-    .icon-menu{
-        display: none;
+        justify-content: space-between;
     }
     .icon-logo{
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
     }
     .content-logo{
         width: 20%;
     }
+    .content-menu > label{
+        display: none;
+    }
     .content-menu{
-        width: 80%;
+        width: auto;
     }
     .menu{
         background-color: white;
@@ -237,11 +235,9 @@ a{
     .menu-item{
         background-color: white;
         display: inline-block;
-        
     }
     .menu-item a{
         color: black;
-        
     }
     .menu{
         position: relative;
@@ -255,9 +251,7 @@ a{
     .titulos h1{
         width: 100%;
     }
-    .titulos h1::{
-        color: blue;
-    }
+
     .titulos p{
         width: 600px;
         text-align: justify;
@@ -268,20 +262,29 @@ a{
     }
 
     /*ASIDE EPISODIOS*/
-   
+
     .contenedor-reproductor{
         position: relative;
         display: grid;
-        grid-template-columns: 584px 584px;
+        grid-template-columns: 40% 40%;
         grid-template-rows: 232px 232px;
-        grid-gap: 50px;
+        grid-gap: 40px; 
         justify-content: center;
-     
+
+    }
+    .contenedor-reproductor > .reproductor-spotify:nth-child(1){
+        grid-column:1 / 2;
+        grid-row: 1/ 2;
+    }
+    .contenedor-reproductor > .reproductor-spotify:nth-child(2){
+        grid-column:2 / 3;
+        grid-row: 1/ 2;
+        width: 100%;
     }
     .contenedor-episodios h1{
         padding: 30px 0px 30px 150px;
     }
-   
+
     /* FIN ASIDE EPISODIOS*/
 
     /*aside historia*/
@@ -293,8 +296,8 @@ a{
         display: grid;
         grid-template-columns: 40% 60%;
         grid-template-rows: auto auto 300px auto;
-       
-        
+
+
     }
     .contenedor-historia-portada img{
         grid-column: 1 / 2;
@@ -309,9 +312,67 @@ a{
     .contenedor-historia-portada div{
         grid-column: 2/3;
         grid-row: 3/4;
-      
+    }
+
+    .contenedor-historia-img{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+    }
+    /*fin aside historia*/
+
+    /*aside temas*/
+    .contenedor-img-temas{
+        position: relative;
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20%;
+        justify-content: space-around;
+    }
+    .temas{
+        margin-bottom: 60px;
     }
     
-    /*fin aside historia*/
+    /*fin aside temas*/
+
+    /*novedades*/
+    .novedades{
+        height: 350px;
+    }
+    .novedades .contenedor-oblicuo{
+        padding-top: 30px;
+        position: relative;
+        height: 150px;
+    }
+    .contenedor-novedades{
+        margin-top: 30px;
+        height: 300px;
+        background:linear-gradient(225deg, #0000FF 1%, #0000A3 100%);
+        display: flex;
+        flex-direction: column;
+
+    }
+    /*fin novedades*/
+    footer{
+        top: 10px;
+        height: 100px;
+    }
+    .contenedor-footer{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .derechos{
+        padding-left: 50px;
+    }
+    .contenedor-icon-redes-sociales{
+        width: 20%;
+    }
+
+    /**/
+    input[type="button"]:hover{
+        background: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+        cursor: pointer;
+    }
 }
 
